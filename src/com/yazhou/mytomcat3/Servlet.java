@@ -1,4 +1,4 @@
-package com.yazhou.mytomcat2;
+package com.yazhou.mytomcat3;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,9 +11,8 @@ public interface Servlet {
     public void init();
 
     //服务
-    public void service(InputStream is, OutputStream ops) throws IOException;
+    public void service(ByteBuffer buffer) throws IOException;
 
     //销毁
     public void destroy();
-
 }
