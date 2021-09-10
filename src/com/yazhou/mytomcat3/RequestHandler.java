@@ -1,6 +1,5 @@
 package com.yazhou.mytomcat3;
 
-import com.yazhou.mytomcat3.Servlet;
 
 import java.io.*;
 import java.net.Socket;
@@ -98,7 +97,7 @@ public class RequestHandler implements Runnable{
             //通过反射将java程序加载到内存中
             Class clazz=Class.forName(value);
 
-            com.yazhou.mytomcat3.Servlet servlet=(Servlet) clazz.newInstance();
+            Servlet servlet=(Servlet) clazz.newInstance();
 
             //执行init方法
             servlet.init();
